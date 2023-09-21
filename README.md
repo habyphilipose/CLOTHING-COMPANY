@@ -73,6 +73,10 @@ ORDER BY Total_discount DESC
 
 ![image](https://github.com/habyphilipose/CLOTHING-COMPANY/assets/31076902/a2cfc70d-1ab2-4e2c-a480-07335c721521)
 
+It is found that the products with `more discount` generated `more revenue` to the company. Customers are attracted by this metric. It helps in `Clearance of Inventory`, Gives `Competitive Advantage`. This data can be used for `more targeted marketing` and `pricing strategies`.
+It's essential for a company to strike a balance between offering discounts to drive sales and maintaining healthy profit margins. A well thought pricing and discounting strategy should consider the long-term sustainability of the business and the impact on brand perception. Regular analysis of discounting practices and their effects on revenue and profitability is also crucial for making informed decisions.
+
+
 ***
 ## Transaction Analysis
 
@@ -95,6 +99,10 @@ FROM
 
 ![image](https://github.com/habyphilipose/CLOTHING-COMPANY/assets/31076902/e815e238-106b-439f-a109-19cd05129d04)
 
+`Competitive Benchmarking`: This can Companies can compare their average basket size with industry benchmarks or competitors. This can reveal whether the business is effectively capitalizing on sales opportunities or if there's room for improvement.
+Also `Customer Segmentation` can be done with their buying capacity and choices.
+
+
 ### 3.	What are the 25th, 50th and 75th percentile values for the revenue per transaction?
 
 ```sql
@@ -113,6 +121,13 @@ first_value(Total_revenue) over( order by case when percent_ranks <= 0.75 then p
 FROM CTE
 ```
 ![image](https://github.com/habyphilipose/CLOTHING-COMPANY/assets/31076902/78c60903-7799-4d3f-b054-e172d378c585)
+
+These `percentiles` help understand how revenue is spread across transactions and can reveal important information about `customer behavior` and `business performance`. 
+50% percentile or the `Median` is a measure of central tendency and provides an idea of the `typical transaction value`.
+Percentiles also also help in `revenue forecasting`. Understanding the distribution of revenue per transaction allows businesses to estimate future revenue more accurately.
+A focus on improving `operational efficiency for larger transactions` can lead to `higher profitability`. 
+If a significant portion of `transactions falls in the lower quartiles`, it may indicate room `for price adjustments or promotions` to increase revenue.
+
 
 ### 4.	What is the average discount value per transaction?
 
@@ -148,6 +163,12 @@ FROM cte
 
 ![image](https://github.com/habyphilipose/CLOTHING-COMPANY/assets/31076902/2d1de765-145e-4867-a234-ed641ab65c62)
 
+Understanding the percentage split of transactions between members and non-members can have several important business impacts:
+•	`Member Engagement`: It helps assess the effectiveness of membership programs and customer loyalty initiatives. If a significant percentage of transactions come from members, it indicates that these programs are successful in retaining and engaging customers
+•	`Targeted Marketing`: Knowing the split allows for more targeted marketing efforts. Companies can tailor marketing campaigns to members and non-members differently based on their contributions and behaviors.
+•	`Retention Strategies`: If members contribute significantly to revenue, it underscores the importance of customer retention strategies to keep them engaged and satisfied
+
+
 ### 6.	What is the average revenue for member transactions and non-member transactions?
 
 ```sql
@@ -168,6 +189,8 @@ GROUP BY member;
 ```
 
 ![image](https://github.com/habyphilipose/CLOTHING-COMPANY/assets/31076902/b0da0daa-5b0f-414c-a608-d7ec45540834)
+
+Average revenue to the company by the `member is $2.13 more` than the non-member. 
 
 ## Product Analysis
 
@@ -285,6 +308,14 @@ ORDER BY 1,3 DESC
 
 ![image](https://github.com/habyphilipose/CLOTHING-COMPANY/assets/31076902/f00904c0-53a6-4ca9-a5a6-1074bb4d3802)
 
+
+•	It helps identify which products are most popular or profitable within each segment. This information can guide `inventory management, marketing efforts, and product development` to cater to specific customer preferences.
+
+•	`Marketing Targeting`: It helps identify which products are most popular or profitable within each segment. This information can guide inventory management, marketing efforts, and product development to cater to specific customer preferences.
+
+•	`Customer Segmentation Refinement`: The data can help refine customer segments. If you discover that certain products are the primary drivers of revenue within a segment, it might indicate that this segment has distinct preferences or needs.
+
+
 ### 7.	What is the percentage split of total revenue by category?
 
 ```sql
@@ -308,6 +339,8 @@ FROM cte
 
 ![image](https://github.com/habyphilipose/CLOTHING-COMPANY/assets/31076902/cb968fb6-e61d-45fd-9f7b-9fe9e98679cd)
 
+Men contribute slightly more to the revenue of the company. This also shows that the company should tap the potential in increasing the revenue from women categories. 
+
 ### 8.	What is the total transaction “penetration” for each product? (hint: penetration = number of transactions where at least 1 quantity of a product was purchased divided by total number of transactions)
 
 ```sql
@@ -329,3 +362,8 @@ ORDER BY total_transaction_penetration_for_each_product DESC
 ```
 
 ![image](https://github.com/habyphilipose/CLOTHING-COMPANY/assets/31076902/d3fe23b4-28d1-4bfc-86b9-fb9bbf62e9af)
+
+The total transaction "penetration" for each product can help assess `how frequently each product` is included in customer transactions.
+In our example the `most penetrating product is socks` - I think people might add this product to get a discount if they have spent not enough to get it and they do not want to spend too much. `Smart pricing` and `carefully chosen to upsell products` is a key to success. 
+`Product Bundling` is one strategy that we can use here. Understanding which products are `frequently purchased` together allows us `to create product bundles or package deals`. This can increase the average transaction value and encourage customers to buy related products.
+
