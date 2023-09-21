@@ -17,6 +17,8 @@ Product sales contains product level information for all the transactions made f
 
 ## 📚 Table of Contents
 - [Case Study Questions](#case-study-questions)
+- [High Level Sales Analysis](#high-level-sales-analysis)
+- [Transaction Analysis](#transaction-analysis)
 - [Product Analysis](#product-analysis)
 
 ***
