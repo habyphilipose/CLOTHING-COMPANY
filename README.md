@@ -15,6 +15,13 @@ Product sales contains product level information for all the transactions made f
 
 ![image](https://github.com/habyphilipose/CLOTHING-COMPANY/assets/31076902/c39152f6-42df-4ad5-b510-097707711380)
 
+## 📚 Table of Contents
+- [Case Study Questions](#case-study-questions)
+- [Product Analysis](#product-analysis)
+- [Entity Relationship Diagram](#transaction-analysis)
+- [Question and Solution](#question-and-solution)
+
+***
 ## Case Study Questions
 
 The following questions can be considered key business questions and metrics that the Clothing brand team requires for their monthly reports.
@@ -66,6 +73,7 @@ ORDER BY Total_discount DESC
 
 ![image](https://github.com/habyphilipose/CLOTHING-COMPANY/assets/31076902/a2cfc70d-1ab2-4e2c-a480-07335c721521)
 
+***
 ## Transaction Analysis
 
 ### 1.	How many unique transactions were there?
