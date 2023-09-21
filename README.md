@@ -18,8 +18,6 @@ Product sales contains product level information for all the transactions made f
 ## 📚 Table of Contents
 - [Case Study Questions](#case-study-questions)
 - [Product Analysis](#product-analysis)
-- [Entity Relationship Diagram](#transaction-analysis)
-- [Question and Solution](#question-and-solution)
 
 ***
 ## Case Study Questions
